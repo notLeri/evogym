@@ -41,6 +41,7 @@ function App() {
       <ContactUs setSelectedPage={setSelectedPage}  />
       <Footer />
     </div>
+  )
 }
 
 export default App
