@@ -61,29 +61,29 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{ duration: 0.5 }}
                       variants={{
-                        hidden: { opacity: 0, y: 50 },
-                        visible: { opacity: 1, y: 0 },
+                            hidden: { opacity: 0, y: 50 },
+                            visible: { opacity: 1, y: 0 },
                       }}
                     >
                         <form
-                          target="_blank"
-                          onSubmit={onSubmit}
-                          action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
-                          method="POST"
+                            target="_blank"
+                            onSubmit={onSubmit}
+                            action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
+                            method="POST"
                         >
                             <input
                                 className={inputStyles}
                                 type="text"
                                 placeholder="NAME"
                                 {...register("name", {
-                                  required: true,
-                                  maxLength: 100,
+                                    required: true,
+                                    maxLength: 100,
                                 })}
                             />
                             {errors.name && (
                                 <p className="mt-1 text-primary-500">
-                                  {errors.name.type === "required" && "This field is required."}
-                                  {errors.name.type === "maxLength" &&
+                                    {errors.name.type === "required" && "This field is required."}
+                                    {errors.name.type === "maxLength" &&
                                     "Max length is 100 char."}
                                 </p>
                             )}
@@ -93,14 +93,14 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                                 type="text"
                                 placeholder="EMAIL"
                                 {...register("email", {
-                                  required: true,
-                                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                    required: true,
+                                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                                 })}
                             />
                             {errors.email && (
                                 <p className="mt-1 text-primary-500">
-                                  {errors.email.type === "required" && "This field is required."}
-                                  {errors.email.type === "pattern" && "Invalid email address."}
+                                    {errors.email.type === "required" && "This field is required."}
+                                    {errors.email.type === "pattern" && "Invalid email address."}
                                 </p>
                             )}
 
@@ -110,15 +110,15 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                                 rows={4}
                                 cols={50}
                                 {...register("message", {
-                                  required: true,
-                                  maxLength: 2000,
+                                    required: true,
+                                    maxLength: 2000,
                                 })}
                             />
                             {errors.message && (
                                 <p className="mt-1 text-primary-500">
-                                  {errors.message.type === "required" &&
+                                    {errors.message.type === "required" &&
                                     "This field is required."}
-                                  {errors.message.type === "maxLength" &&
+                                    {errors.message.type === "maxLength" &&
                                     "Max length is 2000 char."}
                                 </p>
                             )}
@@ -139,15 +139,15 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                         variants={{
-                          hidden: { opacity: 0, y: 50 },
-                          visible: { opacity: 1, y: 0 },
+                            hidden: { opacity: 0, y: 50 },
+                            visible: { opacity: 1, y: 0 },
                         }}
                     >
                         <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
-                          <img
-                            className="w-full"
-                            alt="contact-us-page-graphic"
-                            src={ContactUsPageGraphic}
+                            <img
+                                className="w-full"
+                                alt="contact-us-page-graphic"
+                                src={ContactUsPageGraphic}
                             />
                         </div>
                     </motion.div>
